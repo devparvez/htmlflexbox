@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .container{
+            height: 500px;
+            border: 2px solid slategray;
+            display: flex;
+            justify-content: center;
+            /*justify-content: flex-end;*/
+            /*justify-content: space-between;*/
+            /*justify-content: space-evenly;*/
+            /*justify-content: space-around;*/
+
+            /*align-items: mane holo verticalyy;*/
+
+            align-items: flex-end;
+            align-items: center;
+            align-items: stretch;
+            /*align-items: flex-start;*/
+        }
+        .box{
+            width:200px;
+            /*height: 200px;*/
+            border: 2px dashed navy;
+            font-size: 3em;
+        }
+        .content-grow{
+            display: flex;
+        }
+        .box-5{
+            border:1px solid red;
+            height:200px;
+            width:100px;
+            order:2;
+        }
+        .box-6{
+            border:1px solid green;
+            width:200px;
+            order:1
+        }
+        #grow{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>box1</p>
+        </div>
+        <div class="box">
+            <p>box2</p>
+        </div>
+        <div class="box">
+            <p>box3</p>
+        </div>
+    </div>
+
+    <div class="content-grow" >
+        <div class="box-5"></div>
+        <div class="box-6" id="grow"></div>
+    </div>
+    
+</body>
+</html>
