@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom property</title>
+    <style>
+
+        :root{
+            --dark-border-color:black;
+            --main-text-color:rgb(205, 159, 90);
+            --maing-background-color:slateblue;
+            --main-border-color:rgb(12, 209, 77);
+            --side-width:200px;
+        }
+        h1{
+            color:var(--main-text-color);
+
+        }
+        h2{
+            color:var(--main-text-color);
+            border: 5px solid var(--main-border-color);
+        } 
+        p{
+            color:var(--main-text-color);
+        }
+        footer{
+            color:var(--main-text-color);
+            border: 2px solid var(--dark-border-color);
+            clear:both;
+
+        }
+        h6{
+            background-color: var(--main-border-color);
+        }
+        .side-nav,.blogs{
+            float:left;
+            height: 500px;
+        }
+        aside{
+            background-color: springgreen;
+            width:var(--side-width);
+        }
+        .blogs{
+            background-color: tomato;
+            width:calc(100% - 2* var(--side-width));
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I am exploring custom property</h1>
+        <p>welcome to my website</p>
+    </header>
+    <main>
+        <h2>My awesome content</h2>
+        <h6>Background color</h6>
+        <section>
+            <aside class="side-nav">
+                My side navigation
+            </aside>
+            <div class="blogs">
+                <h2>my blog</h2>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <p><small>copy right</small></p>
+    </footer>
+    
+</body>
+</html>
